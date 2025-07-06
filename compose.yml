@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   mosquitto:
     image: eclipse-mosquitto:2
@@ -12,6 +10,14 @@ services:
       - ./mosquitto/config:/mosquitto/config
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
+
+  mqtt-publisher:
+    build:
+      context: ./mqtt-publisher
+    container_name: mqtt-publisher
+    depends_on:
+      - mosquitto
+    restart: unless-stopped
 
   influxdb:
     image: influxdb:1.8
