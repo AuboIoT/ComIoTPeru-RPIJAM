@@ -1,0 +1,55 @@
+# Ignore generated data
+*/data/*.db
+*/data/*.log
+*/data/*.pid
+*/data/package.json
+*/data/package-lock.json
+*/data/.config*
+*/data/.flows*
+*/data/node_modules/
+*/data/.npm/
+
+# Ignore SQLite WAL files
+*.sqlite-shm
+*.sqlite-wal
+
+# Logs
+*.log
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and runtime data
+*.log
+*.pid
+
+# Node-RED generated files
+nodered/data/.config.nodes.json
+nodered/data/.config.users.json
+nodered/data/.config.users.json.backup
+nodered/data/.flows.json.backup
+nodered/data/.flows_cred.json.backup
+nodered/data/flows_cred.json
+nodered/data/package.json
+nodered/data/package-lock.json
+nodered/data/node_modules/
+nodered/data/.npm/
+
+# Grafana data (SQLite DB, sessions, etc.)
+grafana/grafana.db*
+grafana/sessions/
+
+# InfluxDB data
+influxdb/meta/meta.db
+influxdb/wal/
+influxdb/data/
+
+# Mosquitto runtime data
+mosquitto/data/mosquitto.db
+mosquitto/log/mosquitto.log
+
+# Temporary scripts or backup files
+*.swp
+*.bak
+*.tmp
